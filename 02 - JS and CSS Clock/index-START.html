@@ -64,15 +64,18 @@
       top: 50%;
       transform-origin: 100%;
       transform: rotate(90deg);
-      transition: all 0.5s;
+      transition: all 0.05s;
       transition-timing-function: cubic-bezier(01, 2.7, 0.58, 1);
     }
 
   </style>
-
   <script>
+    function setDate() {
+    const now = new Date();
+    const seconds = now.seconds;
+  }
 
-
+  setInterval(setDate, 1000)
   </script>
 </body>
 </html>
