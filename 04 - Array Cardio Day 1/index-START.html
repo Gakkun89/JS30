@@ -78,7 +78,12 @@
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    const counts = {};
 
+    data.forEach(element => {
+      counts[element] = counts[element] ? counts[element] + 1 : 1;
+    });
+    console.log(Object.values(counts).reduce((total, num) => total + num));
   </script>
 </body>
 </html>
