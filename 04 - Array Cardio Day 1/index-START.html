@@ -67,14 +67,7 @@
     // 7. sort Exercise
     // Sort the people alphabetically by last name
     const splitNames = people.map(person => person.split(", "));
-    sortedSplitNames = splitNames.sort((a, b) => {
-      if (a[0] > b[0]) {
-        return 1;
-      }
-      if (a[0] < b[0]) {
-        return -1;
-      }
-    });
+    sortedSplitNames = splitNames.sort((a, b) => (a[0] > b[0]) ? 1 : -1);
     console.log(sortedSplitNames);
     // 8. Reduce Exercise
     // Sum up the instances of each of these
