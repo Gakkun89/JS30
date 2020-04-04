@@ -53,7 +53,13 @@
     console.count('Wes');
     console.count('Wes');
     // timing
-
+    console.time('Fetching data');
+    fetch('https://api.github.com/users/Gakkun89')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('Fetching data');
+        console.log(data);
+      });
   </script>
 </body>
 </html>
