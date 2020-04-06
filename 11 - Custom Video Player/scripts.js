@@ -17,6 +17,14 @@ function togglePlay() {
  //  video.pause();
  // }
 }
+
+function updateButton() {
+
+}
+
  // Hook them up
 video.addEventListener('click', togglePlay);
+video.addEventListener('play', updateButton);
+video.addEventListener('pause', updateButton);
+
 toggle.addEventListener('click', togglePlay);
