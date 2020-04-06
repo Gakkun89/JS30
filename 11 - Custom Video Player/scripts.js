@@ -19,7 +19,8 @@ function togglePlay() {
 }
 
 function updateButton() {
-
+const icon = this.paused ? '►' : '❚ ❚';
+toggle.textContent = icon;
 }
 
  // Hook them up
