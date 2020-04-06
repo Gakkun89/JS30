@@ -23,9 +23,14 @@ const icon = this.paused ? '►' : '❚ ❚';
 toggle.textContent = icon;
 }
 
+function skip(){
+
+}
+
  // Hook them up
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
 
 toggle.addEventListener('click', togglePlay);
+skipButtons.forEach(button => button.addEventListener('click', skip));
