@@ -24,7 +24,7 @@ toggle.textContent = icon;
 }
 
 function skip(){
-
+video.currentTime += parseFloat(this.dataset.skip);
 }
 
  // Hook them up
