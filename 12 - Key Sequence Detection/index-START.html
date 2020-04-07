@@ -11,7 +11,10 @@
   const secret = 'warren';
   window.addEventListener('keyup', (e) => {
     pressed.push(e.key);
-    pressed.splice(-secret.length -1, pressed.length - secret);
+    pressed.splice(-secret.length -1, pressed.length - secret.length);
+    if(pressed.join('').includes(secret)) {
+      console.log('Cheat mode active');
+    }
   })
 </script>
 </body>
