@@ -11,7 +11,7 @@
   const secret = 'warren';
   window.addEventListener('keyup', (e) => {
     pressed.push(e.key);
-    pressed.splice(-secret.length -1);
+    pressed.splice(-secret.length -1, pressed.length - secret);
   })
 </script>
 </body>
