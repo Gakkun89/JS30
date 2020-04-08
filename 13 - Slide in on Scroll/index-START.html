@@ -63,7 +63,7 @@
   function checkSlide(e) {
     sliderImages.forEach(sliderImage => {
       const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
-
+      const imageBottom = sliderImage.offsetTop + sliderImage.height;
     });
   }
   window.addEventListener('scroll', debounce(checkSlide));
