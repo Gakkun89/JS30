@@ -42,11 +42,13 @@
   }
 
   function populateList(items = [], platesList) {
-    platesList.innerHTML = plates.map((plate, i) => {
+    platesList.innerHTML = items.map((item, i) => {
       return `
-
+        <li>
+          <label for="">${item.text}</label>
+        </li>
       `;
-    })
+    }).join('');
   }
 
   addItems.addEventListener('submit', addItem);
