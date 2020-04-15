@@ -9,6 +9,9 @@ function getVideo() {
   .then(MediaStream => {
     video.srcObject = MediaStream;
     video.play();
+  })
+  .catch(err => {
+    console.error('Oh no', err);
   });
 }
 
