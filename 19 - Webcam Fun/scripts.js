@@ -6,8 +6,10 @@ const snap = document.querySelector('.snap');
 
 function getVideo() {
   navigator.mediaDevices.getUserMedia({video: true, audio: false})
-  .then(localMediaStream => {
-    video.src = window.URL.createObjectURL(localMediaStream);
+  .then(MediaStream => {
+    video.srcObject = MediaStream;
     video.play();
   });
 }
+
+getVideo();
