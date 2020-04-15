@@ -26,6 +26,9 @@ function paintToCanvas() {
   }, 16);
 }
 
-function
+function takePhoto() {
+  snap.currentTime = 0;
+  snap.play();
+}
 
 getVideo();
