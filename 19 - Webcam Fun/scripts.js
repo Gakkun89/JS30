@@ -23,6 +23,8 @@ function paintToCanvas() {
 
   return setInterval(() => {
     ctx.drawImage(video, 0, 0, width, height);
+    const pixels = ctx.getImageData(0, 0, width, height);
+    pixels = redEffect(pixels);
   }, 16);
 }
 
@@ -36,6 +38,14 @@ function takePhoto() {
   link.setAttribute('download', 'handsome');
   link.innerHTML = `<img src="${data}" alt="Handsome" /> `
   strip.insertBefore(link, strip.firstChild);
+}
+
+function redEffect(pixels) {
+  for(let i = 0; i < pixels.length; i += 4) {
+    pixels[i] // r
+    pixels[i + 1] // g
+    pixels[i + 2] // b
+  }
 }
 
 getVideo();
