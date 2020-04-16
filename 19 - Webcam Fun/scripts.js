@@ -31,10 +31,10 @@ function takePhoto() {
   snap.play();
 
   const data = canvas.toDataURL('image/jpeg');
-  const line = document.createElement('a');
+  const link = document.createElement('a');
   link.href = data;
   link.setAttribute('download', 'handsome');
-  link.textContent = 'Download Image';
+  link.innerHTML = `<img src="${data}" alt="Handsome" /> `
   strip.insertBefore(link, strip.firstChild);
 }
 
