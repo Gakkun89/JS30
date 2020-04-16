@@ -23,8 +23,9 @@ function paintToCanvas() {
 
   return setInterval(() => {
     ctx.drawImage(video, 0, 0, width, height);
-    const pixels = ctx.getImageData(0, 0, width, height);
+    let pixels = ctx.getImageData(0, 0, width, height);
     pixels = redEffect(pixels);
+    ctx.putImageData(pixels, 0, 0);
   }, 16);
 }
 
@@ -46,6 +47,7 @@ function redEffect(pixels) {
     pixels[i + 1] = pixels.data[i + 1] - 50; // g
     pixels[i + 2] = pixels.data[i + 2] * 0.5;// b
   }
+  return pixels;
 }
 
 getVideo();
