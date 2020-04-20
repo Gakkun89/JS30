@@ -33,7 +33,7 @@
     document.body.append(highlight);
 
     function highlightLink() {
-
+      const linkCoords = this.getBoundingClientRect();
     }
     triggers.forEach(a => a.addEventListener('mouseenter', highlightLink));
   </script>
