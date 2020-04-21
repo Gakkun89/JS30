@@ -44,9 +44,11 @@
     .join('');
  }
 
- function setVoice() {
+ function setVoice(startOver = true) {
   msg.voice = voices.find(voice => voice.name === this.value);
-  toggle();
+  if(startOver){
+    toggle();
+  }
  }
 
  function toggle() {
