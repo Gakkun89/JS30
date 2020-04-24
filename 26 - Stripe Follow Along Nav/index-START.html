@@ -237,7 +237,8 @@
       height: dropdownCoords.height,
       width: dropdownCoords.width
     }
-    background.setProperty
+    background.style.setProperty('width', coords.width);
+    background.style.setProperty('height', coords.height);
   }
 
   function handleLeave() {
