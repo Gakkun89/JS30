@@ -40,22 +40,22 @@
   let startX;
   let scrollLeft;
 
-  slider.addEventListner('mousedown', () => {
+  slider.addEventListener('mousedown', () => {
     isDown = true;
     slider.classList.add('active');
   });
 
-  slider.addEventListner('mouseleave', () => {
+  slider.addEventListener('mouseleave', () => {
     isDown = false;
     slider.classList.remove('active');
   });
 
-  slider.addEventListner('mouseup', () => {
+  slider.addEventListener('mouseup', () => {
     isDown = false;
     slider.classList.remove('active');
   });
 
-  slider.addEventListner('mousemove', () => {
+  slider.addEventListener('mousemove', () => {
     if(!isDown) return;
 
 
