@@ -41,15 +41,15 @@
   let scrollLeft;
 
   slider.addEventListner('mousedown', () => {
-
+    isDown = true;
   });
 
   slider.addEventListner('mouseleave', () => {
-
+    isDown = false;
   });
 
   slider.addEventListner('mouseup', () => {
-
+    isDown = false;
   });
 
   slider.addEventListner('mousemove', () => {
