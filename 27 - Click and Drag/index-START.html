@@ -42,6 +42,7 @@
 
   slider.addEventListner('mousedown', () => {
     isDown = true;
+    slider.classList.add('active');
   });
 
   slider.addEventListner('mouseleave', () => {
@@ -54,6 +55,8 @@
 
   slider.addEventListner('mousemove', () => {
     if(!isDown) return;
+
+
   });
 
 </script>
