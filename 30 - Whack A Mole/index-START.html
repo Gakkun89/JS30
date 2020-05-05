@@ -69,6 +69,13 @@
     peep();
     setTimeout(() => timeUp = true, 10000 );
   }
+
+  function bonk(e) {
+    if(!e.isTrusted) return; // watch for cheats
+
+  }
+
+  moles.forEach(mole => mole.addEventListener('click', bonk));
 </script>
 </body>
 </html>
