@@ -38,8 +38,10 @@
   const moles = document.querySelectorAll('.mole');
 
   function randTime(min, max){
-    return Math.random() * (max - min) + min;
+    return Math.round(Math.random() * (max - min) + min);
   }
+
+
 </script>
 </body>
 </html>
